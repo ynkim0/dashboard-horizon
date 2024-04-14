@@ -1,30 +1,31 @@
+import { CloseIcon, DownloadIcon, InfoIcon, InfoOutlineIcon, MoonIcon } from '@chakra-ui/icons'
+import MiniSt from '../../components/card/MiniSt'
 import Logo from '../../components/common/Logo'
-import { Heading, Button, Stack, HStack, VStack } from '@chakra-ui/react'
+import { Heading, Button, Stack, HStack, VStack, SimpleGrid } from '@chakra-ui/react'
+import IconBox from '../../components/icon/IconBox'
+import SlideMain from '../../components/slide/SlideMain'
 
 function Home() {
     return (
         <div>
-            <Heading as={'h3'} fontSize={30}>
-                홈 화면
-            </Heading>
+            <SlideMain />
+            <SimpleGrid columns={[1, null, 2, 3, 6]} spacing={10}>
+                <MiniSt
+                    name="타이틀1"
+                    value="$350.0"
+                    startIcon={<IconBox bg={'red.200'} borderRadius={'10px'} icon={<MoonIcon />} />}
+                />
+                <MiniSt
+                    name="타이틀2"
+                    value="$660.0"
+                    startIcon={<IconBox bg={'blue.200'} borderRadius={'50%'} icon={<CloseIcon />} />}
+                />
+                <MiniSt growth="15.34%" name="타이틀3" value="$770.0" />
+                <MiniSt name="타이틀4" value="$990.0" endIcon={<InfoIcon />} />
+                <MiniSt name="타이틀5" value="$220.0" startIcon={<InfoOutlineIcon />} />
+                <MiniSt name="타이틀6" value="$880.0" startIcon={<MoonIcon />} />
+            </SimpleGrid>
             {/* <Stack direction={['column', null, null, 'row']}> */}
-            <Stack direction={{ base: 'column', lg: 'row' }}>
-                <Button variant={'icon'} colorScheme="blue">
-                    dddd
-                </Button>
-                <Button colorScheme="blue" border={'1px solid #000'} borderRadius={0}>
-                    Button
-                </Button>
-                <Button colorScheme="blue" variant="outline">
-                    Button
-                </Button>
-                <Button colorScheme="blue" variant="ghost">
-                    Button
-                </Button>
-                <Button colorScheme="blue" variant="link">
-                    Button
-                </Button>
-            </Stack>
         </div>
     )
 }

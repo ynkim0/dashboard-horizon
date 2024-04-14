@@ -1,6 +1,5 @@
 import { CheckIcon, CloseIcon, NotAllowedIcon, SmallCloseIcon } from '@chakra-ui/icons'
 import { Card, Progress, Table, TableCaption, TableContainer, Tbody, Td, Tfoot, Th, Thead, Tr } from '@chakra-ui/react'
-import { progress } from 'framer-motion'
 
 function ComplexTable() {
     const complexData = [

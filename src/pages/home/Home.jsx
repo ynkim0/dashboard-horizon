@@ -1,11 +1,16 @@
 import MiniSt from '../../components/card/MiniSt'
-import { SimpleGrid } from '@chakra-ui/react'
+import { Card, SimpleGrid } from '@chakra-ui/react'
 import miniStData from '../../data/miniStData'
 import ComplexTable from './components/ComplexTable'
+import LineChart from '../../components/charts/LineChart'
+import { lineChartDataTotalSpent, lineChartOptionsTotalSpent } from '../../variables/charts'
 
 function Home() {
     return (
         <div>
+            <Card>
+                <LineChart chartData={lineChartDataTotalSpent} chartOptions={lineChartOptionsTotalSpent} />
+            </Card>
             {/* Complex Table */}
             <ComplexTable />
             {/* <SlideMain /> */}
